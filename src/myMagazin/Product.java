@@ -24,6 +24,12 @@ public class Product {
         if (name == null || name.trim().isEmpty()) { // проверка на пустоту или null
             throw new IllegalArgumentException("Название продукта не может быть пустым");
         }
+        if (name.trim().matches("^[0-9]+$")) {
+            throw new IllegalArgumentException("Название продукта не должно содержать только цифры");
+        }
+        if (name.trim().length()< 3) {
+            throw new IllegalArgumentException("Название продукта должно быть минимум 3 символа");
+        }
         this.name = name.trim(); // удаляем лишние пробелы
     }
 //  Установка цены с проверкой
