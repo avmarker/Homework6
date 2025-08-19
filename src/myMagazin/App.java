@@ -96,7 +96,7 @@ public class App {
                 System.out.println(person.getName() + "купил" + p.getName());
                 somePurchased = true;
             } else {
-                System.out.println(person.getName() + "не может позволить себе" + p.getName());
+                System.out.println(person.getName() + " не может позволить себе" + p.getName());
             }
         }
 // Итог вводим купленные продукты или сообщение о нулевой покупке
